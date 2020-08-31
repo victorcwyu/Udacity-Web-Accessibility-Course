@@ -42,13 +42,17 @@
       case VK_RIGHT: {
         e.preventDefault();
 
-        // This seems like a good place to do some stuff :)
+        if (this.focusedIdx === this.buttons.length - 1) {
+          this.focusedIdx = 0;
+        } else {
+          this.focusedIdx++;
+        }
 
         break;
       }
     }
 
-    this.changeFocus(this.focusedIdx); // <-- Hmm, interesting...
+    this.changeFocus(this.focusedIdx);
   };
 
   RadioGroup.prototype.changeFocus = function (idx) {
