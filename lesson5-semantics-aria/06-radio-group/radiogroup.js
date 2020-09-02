@@ -35,7 +35,7 @@
         button.tabIndex = "-1";
       }
 
-      // What about here?
+      button.setAttribute("role", "radio");
     }
   }
 
