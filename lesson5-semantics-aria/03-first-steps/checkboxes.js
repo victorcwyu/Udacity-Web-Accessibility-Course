@@ -43,11 +43,13 @@
     if (this.el.hasAttribute("checked")) {
       this.el.removeAttribute("checked");
 
-      // Hmm.
+      // Keep checked and aria-checked attributes in sync.
+      this.el.setAttribute("aria-checked", "false");
     } else {
       this.el.setAttribute("checked", "");
 
-      // Hmmmmm.
+      // Keep checked and aria-checked attributes in sync.
+      this.el.setAttribute("aria-checked", "true");
     }
   };
 
