@@ -1,9 +1,10 @@
-html, body {
-  background: #FAFAFA;
+html,
+body {
+  background: #fafafa;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-family: "Roboto", "Helvetica", sans-serif;
 }
 
 main {
@@ -18,9 +19,10 @@ main {
   margin: 0 180px;
 }
 
-.disclosure-button:hover, .disclosure-button:focus {
-  background-color: #D81B60;
-  color: #FFF;
+.disclosure-button:hover,
+.disclosure-button:focus {
+  background-color: #d81b60;
+  color: #fff;
 }
 
 .disclosure-button .icon::after {
@@ -31,20 +33,20 @@ main {
   height: 36px;
 }
 
-.disclosure-button .icon::after {
-  content: '▶';
+.disclosure-button[aria-expanded="false"] .icon::after {
+  content: "▶";
 }
 
-.disclosure-button.expanded .icon::after {
-  content: '▼';
+.disclosure-button[aria-expanded="true"] .icon::after {
+  content: "▼";
 }
 
-.disclosure-content.hidden {
+.disclosure-content[aria-hidden="true"] {
   visibility: hidden;
   opacity: 0;
 }
 
-.disclosure-content {
+.disclosure-content[aria-hidden="false"] {
   visibility: visible;
   opacity: 1;
 }
